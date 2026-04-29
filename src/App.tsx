@@ -208,7 +208,7 @@ export default function App() {
           </div>
           <p className="text-slate-500 text-sm">© 2026 Xəttim.az. Bütün hüquqlar qorunur.</p>
           <div className="flex gap-6">
-            <a href="#" className="text-slate-400 hover:text-white transition-colors">Instagram</a>
+            <a href="https://www.instagram.com/xettim.az/" className="text-slate-400 hover:text-white transition-colors">Instagram</a>
             <a href="#" className="text-slate-400 hover:text-white transition-colors">WhatsApp</a>
             <a href="#" className="text-slate-400 hover:text-white transition-colors">Telegram</a>
           </div>
