@@ -22,7 +22,7 @@ export default function Navbar({ user, onLogin, onLogout, isAdmin, onAdminToggle
             className="text-2xl font-bold tracking-tight text-white font-display cursor-pointer" 
             onClick={onLogoClick}
           >
-            xettim<span className="text-brand-electric">.az</span>
+            Xəttim<span className="text-brand-electric">.az</span>
           </span>
         </div>
 
