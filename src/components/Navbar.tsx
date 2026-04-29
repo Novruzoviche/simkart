@@ -15,7 +15,7 @@ export default function Navbar({ user, onLogin, onLogout, isAdmin, onAdminToggle
     <nav className="fixed top-0 left-0 right-0 z-50 bg-brand-midnight/60 backdrop-blur-md border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-6 h-18 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-30 h-8 bg-brand-electric rounded flex items-center justify-center cursor-pointer" onClick={onLogoClick}>
+          <div className="w-38 h-8 bg-brand-electric rounded flex items-center justify-center cursor-pointer" onClick={onLogoClick}>
             <span className="text-black font-black text-lg" onClick={onLogoClick}>+994Xəttim.az</span>
           </div>
         </div>
