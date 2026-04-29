@@ -21,13 +21,13 @@ export default function NumberCard({ item }: NumberCardProps): React.JSX.Element
       case "050":
       case "051":
       case "010":
-        return { name: "Azercell", color: "bg-blue-500/20 text-blue-400 border-blue-500/40" };
+        return { name: "Azercell", color: "bg-blue-400/30 text-blue-300 border-blue-400/60 shadow-[0_0_10px_rgba(59,130,246,0.3)]" };
       case "055":
       case "099":
-        return { name: "Bakcell", color: "bg-red-500/20 text-red-400 border-red-500/40" };
+        return { name: "Bakcell", color: "bg-red-400/30 text-red-300 border-red-400/60 shadow-[0_0_10px_rgba(239,68,68,0.3)]" };
       case "070":
       case "077":
-        return { name: "Nar", color: "bg-orange-500/20 text-orange-400 border-orange-500/40" };
+        return { name: "Nar", color: "bg-orange-400/30 text-orange-300 border-orange-400/60 shadow-[0_0_10px_rgba(249,115,22,0.3)]" };
       default:
         return { name: "", color: "" };
     }
@@ -43,26 +43,26 @@ export default function NumberCard({ item }: NumberCardProps): React.JSX.Element
       whileHover={{ y: -5 }}
       className={`relative overflow-hidden rounded-2xl p-6 transition-all duration-500 group border ${
         item.isVip 
-          ? "bg-[#0c0f16]/80 border-brand-gold/10 hover:border-brand-gold/40 hover:shadow-[0_0_40px_rgba(251,191,36,0.12)]" 
-          : "bg-[#0c0f16]/80 border-white/5 hover:border-brand-electric/30 hover:shadow-[0_0_40px_rgba(14,165,233,0.08)]"
+          ? "bg-[#0c0f16]/60 border-brand-gold/20 hover:border-brand-gold/60 hover:shadow-[0_0_50px_rgba(251,191,36,0.2)]" 
+          : "bg-[#0c0f16]/60 border-white/10 hover:border-brand-electric/40 hover:shadow-[0_0_50px_rgba(14,165,233,0.15)]"
       }`}
     >
       {/* Glossy Reflection Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-white/[0.02] via-transparent to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-white/[0.08] via-white/[0.02] to-transparent pointer-events-none" />
 
       {/* Category Ribbon - Minimal & Glowy */}
       <div className="flex justify-between items-center mb-10">
         <div className={`px-2.5 py-0.5 rounded-md text-[8px] font-black tracking-[0.25em] uppercase border backdrop-blur-xl ${
           item.isVip 
-            ? "bg-brand-gold/20 text-brand-gold border-brand-gold/40 shadow-[0_0_15px_rgba(251,191,36,0.2)]" 
-            : "bg-white/5 text-gray-400 border-white/10"
+            ? "bg-brand-gold/30 text-brand-gold border-brand-gold/60 shadow-[0_0_20px_rgba(251,191,36,0.4)]" 
+            : "bg-white/10 text-gray-300 border-white/20"
         }`}>
           {item.category}
         </div>
         <div className={`px-2.5 py-0.5 rounded-md text-[8px] font-black tracking-[0.25em] uppercase border backdrop-blur-xl ${operator.color} relative`}>
           {operator.name}
           {item.isVip && (
-            <div className="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse shadow-[0_0_8px_rgba(251,191,36,1)]" />
+            <div className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-brand-gold animate-pulse shadow-[0_0_12px_rgba(251,191,36,1)]" />
           )}
         </div>
       </div>
@@ -70,7 +70,7 @@ export default function NumberCard({ item }: NumberCardProps): React.JSX.Element
       {/* Main Content - Ultra Clean */}
       <div className="flex flex-col items-center mb-8">
         <h3 className={`text-xl md:text-2xl font-mono font-bold tracking-tight transition-colors duration-500 ${
-          item.isVip ? "text-brand-gold" : "text-white group-hover:text-brand-electric"
+          item.isVip ? "text-brand-gold" : "text-white group-hover:text-brand-electric drop-shadow-[0_0_8px_rgba(14,165,233,0.5)]"
         }`}>
           {formatted}
         </h3>
@@ -89,8 +89,8 @@ export default function NumberCard({ item }: NumberCardProps): React.JSX.Element
             rel="noopener noreferrer"
             className={`w-full block text-center py-2.5 rounded-lg text-[9px] font-black uppercase tracking-[0.2em] transition-all duration-300 ${
               item.isVip 
-                ? "bg-brand-gold/5 text-brand-gold border border-brand-gold/20 hover:bg-brand-gold hover:text-black" 
-                : "bg-white/[0.03] text-white/60 border border-white/5 hover:bg-brand-electric hover:text-black hover:border-brand-electric"
+                ? "bg-brand-gold/10 text-brand-gold border border-brand-gold/30 hover:bg-brand-gold hover:text-black hover:shadow-[0_0_15px_rgba(251,191,36,0.3)]" 
+                : "bg-white/[0.08] text-white/70 border border-white/10 hover:bg-brand-electric hover:text-black hover:border-brand-electric hover:shadow-[0_0_15px_rgba(14,165,233,0.3)]"
             }`}
           >
             SİFARİŞ
@@ -104,7 +104,7 @@ export default function NumberCard({ item }: NumberCardProps): React.JSX.Element
 
       {/* Hover Shimmer - Golden / Electric */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
-        <div className={`absolute inset-0 bg-gradient-to-r from-transparent ${item.isVip ? 'via-brand-gold/5' : 'via-brand-electric/5'} to-transparent -translate-x-full group-hover:animate-shimmer`} 
+        <div className={`absolute inset-0 bg-gradient-to-r from-transparent ${item.isVip ? 'via-brand-gold/10' : 'via-brand-electric/10'} to-transparent -translate-x-full group-hover:animate-shimmer`} 
              style={{ animationDuration: '2s' }} />
       </div>
     </motion.div>
