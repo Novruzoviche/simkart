@@ -204,9 +204,9 @@ export default function App() {
       <footer className="mt-24 border-t border-white/5 py-12 px-4 bg-brand-black">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-2">
-            <span className="text-2xl font-display font-bold">xettim<span className="text-brand-electric">.az</span></span>
+            <span className="text-2xl font-display font-bold">Xəttim<span className="text-brand-electric">.az</span></span>
           </div>
-          <p className="text-slate-500 text-sm">© 2024 xettim.az. Bütün hüquqlar qorunur.</p>
+          <p className="text-slate-500 text-sm">© 2026 Xəttim.az. Bütün hüquqlar qorunur.</p>
           <div className="flex gap-6">
             <a href="#" className="text-slate-400 hover:text-white transition-colors">Instagram</a>
             <a href="#" className="text-slate-400 hover:text-white transition-colors">WhatsApp</a>
