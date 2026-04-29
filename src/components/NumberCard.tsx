@@ -16,6 +16,25 @@ export default function NumberCard({ item }: NumberCardProps): React.JSX.Element
     return "from-brand-sidebar via-brand-midnight to-brand-input border-white/5";
   };
 
+  const getOperatorInfo = (prefix: string) => {
+    switch (prefix) {
+      case "050":
+      case "051":
+      case "010":
+        return { name: "Azercell", color: "bg-blue-500/20 text-blue-400 border-blue-500/40" };
+      case "055":
+      case "099":
+        return { name: "Bakcell", color: "bg-red-500/20 text-red-400 border-red-500/40" };
+      case "070":
+      case "077":
+        return { name: "Nar", color: "bg-orange-500/20 text-orange-400 border-orange-500/40" };
+      default:
+        return { name: "", color: "" };
+    }
+  };
+
+  const operator = getOperatorInfo(item.prefix);
+
   return (
     <motion.div
       layout
@@ -40,9 +59,12 @@ export default function NumberCard({ item }: NumberCardProps): React.JSX.Element
         }`}>
           {item.category}
         </div>
-        {item.isVip && (
-          <div className="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse shadow-[0_0_8px_rgba(251,191,36,1)]" />
-        )}
+        <div className={`px-2.5 py-0.5 rounded-md text-[8px] font-black tracking-[0.25em] uppercase border backdrop-blur-xl ${operator.color} relative`}>
+          {operator.name}
+          {item.isVip && (
+            <div className="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse shadow-[0_0_8px_rgba(251,191,36,1)]" />
+          )}
+        </div>
       </div>
 
       {/* Main Content - Ultra Clean */}
